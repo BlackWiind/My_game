@@ -1,0 +1,16 @@
+<resources>
+    <!--MainMenu-->
+    <string name="app_name">Игра</string>
+    <string name="txt_mainMenu_newGame">Новая игра</string>
+    <string name="txt_mainMenu_settings">Настройки</string>
+    <string name="txt_mainMenu_leaderboard">Результаты</string>
+    <string name="txt_mainMenu_exitGame">Выход</string>
+
+     <!--GameScene-->
+    <string name="txt_gameScene_stateReady_Ready">Вы готовы?</string>
+
+    <!--HUD-->
+    <string name="txt_hud_passedDistance">Пройдено</string>
+    <string name="txt_hud_currentSpeed">Скорость</string>
+    <string name="txt_hud_currentShields">Щиты</string>
+</resources>

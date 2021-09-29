@@ -20,7 +20,7 @@ public class MainMenuScene extends SceneFW {
 
     @Override
     public void drawing() {
-        graphicsFW.clearScene(Color.GRAY);
+        graphicsFW.clearScene(Color.BLACK);
         graphicsFW.drawText(coreFW.getString(R.string.txt_mainMenu_newGame),100,200,60,null,Color.BLUE);
         graphicsFW.drawText(coreFW.getString(R.string.txt_mainMenu_settings),100,300,60,null,Color.BLUE);
         graphicsFW.drawText(coreFW.getString(R.string.txt_mainMenu_leaderboard),100,400,60,null,Color.BLUE);

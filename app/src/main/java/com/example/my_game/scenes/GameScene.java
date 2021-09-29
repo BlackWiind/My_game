@@ -51,13 +51,24 @@ public class GameScene extends SceneFW {
     }
 
     private void updateStateRunning() {
+
         gameManager.update();
+        if(GameManager.gameOver){
+            gameState = gameState.GAMEOVER;
+        }
     }
 
     private void updateStatePause() {
     }
 
     private void updateStateGameOver() {
+        if(coreFW.getTouchListenerFW().getTouchUp(250,360,100,35)){
+            coreFW.setScene(new GameScene(coreFW));
+        }
+        if(coreFW.getTouchListenerFW().getTouchUp(250,420,100,35)){
+            coreFW.setScene(new MainMenuScene(coreFW));
+        }
+
     }
 
     @Override
@@ -92,7 +103,18 @@ public class GameScene extends SceneFW {
     }
 
     private void drawingStateGameOver() {
-    }
+        graphicsFW.clearScene(Color.BLACK);
+        graphicsFW.drawText(coreFW.getString(R.string.txt_gameScene_stateGameOver_gameOver),
+                250,100, 30,null,Color.WHITE);
+        graphicsFW.drawText(coreFW.getString(R.string.txt_gameScene_stateGameOver_restart),
+                250,360, 30,null,Color.WHITE);
+        graphicsFW.drawText(coreFW.getString(R.string.txt_gameScene_stateGameOver_exit),
+                250,420, 30,null,Color.WHITE);
+        graphicsFW.drawText(coreFW.getString(R.string.txt_gameScene_stateGameOver_distance)
+                        + ":  " + gameManager.getPassedDistance(),
+                250,200, 20,null,Color.WHITE);
+
+            }
 
     @Override
     public void pause() {

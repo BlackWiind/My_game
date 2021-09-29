@@ -8,6 +8,10 @@
 
      <!--GameScene-->
     <string name="txt_gameScene_stateReady_Ready">Вы готовы?</string>
+    <string name="txt_gameScene_stateGameOver_gameOver">Конец игры</string>
+    <string name="txt_gameScene_stateGameOver_restart">Новая игра</string>
+    <string name="txt_gameScene_stateGameOver_exit">Выход в меню</string>
+    <string name="txt_gameScene_stateGameOver_distance">Пройденая дистанция</string>
 
     <!--HUD-->
     <string name="txt_hud_passedDistance">Пройдено</string>

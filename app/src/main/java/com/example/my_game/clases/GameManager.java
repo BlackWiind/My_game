@@ -14,9 +14,15 @@ public class GameManager {
     private int minScreenX;
     private int minScreenY;
 
+    public int getPassedDistance() {
+        return passedDistance;
+    }
+
     private int passedDistance;
     private int currentSpeedPlayer;
     private int currentShieldsPlayer;
+
+    public static boolean gameOver;
 
     MainPlayer mainPlayer;
     GeneratorBackground generatorBackground;
@@ -24,6 +30,7 @@ public class GameManager {
     HUD hud;
 
     public GameManager(CoreFW coreFW, int sceneWidth, int sceneHeight) {
+        gameOver = false;
         hud = new HUD(coreFW);
         this.maxScreenX = sceneWidth;
         this.maxScreenY = sceneHeight;
@@ -65,4 +72,6 @@ public class GameManager {
         generatorEnemy.drawing(graphicsFW);
         hud.drawing(graphicsFW);
     }
+
+
 }

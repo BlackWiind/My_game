@@ -7,6 +7,7 @@ import com.example.my_framework.SceneFW;
 import com.example.my_game.R;
 import com.example.my_game.clases.GameManager;
 import com.example.my_game.generators.GeneratorBackground;
+import com.example.my_game.utilits.SettingsGame;
 
 public class GameScene extends SceneFW {
 
@@ -62,6 +63,8 @@ public class GameScene extends SceneFW {
     }
 
     private void updateStateGameOver() {
+
+        SettingsGame.addDistance(gameManager.getPassedDistance());
         if(coreFW.getTouchListenerFW().getTouchUp(250,360,100,35)){
             coreFW.setScene(new GameScene(coreFW));
         }

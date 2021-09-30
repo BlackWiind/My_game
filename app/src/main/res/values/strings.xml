@@ -17,4 +17,7 @@
     <string name="txt_hud_passedDistance">Пройдено</string>
     <string name="txt_hud_currentSpeed">Скорость</string>
     <string name="txt_hud_currentShields">Щиты</string>
+
+    <!--Results-->
+    <string name="txt_result_top_distance">Лучшие результаты</string>
 </resources>

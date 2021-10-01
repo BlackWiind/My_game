@@ -12,6 +12,7 @@ import com.example.my_game.utilits.UtilResource;
 public class Enemy extends ObjectFW {
 
     AnimationGameFW animEnemy;
+    final int MIN_SPEED = 2;
 
     public Enemy(int maxScreenX, int maxScreenY, int minScreenY, int enemyType) {
         this.maxScreenX = maxScreenX;
@@ -37,8 +38,11 @@ public class Enemy extends ObjectFW {
     }
 
     public void update(double speedPlayer){
-        objX-=speed;
+        objX-=speed-1;
         objX-=speedPlayer;
+        if(speed<MIN_SPEED){
+            speed = MIN_SPEED;
+        }
         if(objX<minScreenX){
             objX = maxScreenX;
             objY = UtilRandomFW.getGap(minScreenY,maxScreenY);

@@ -65,10 +65,10 @@ public class GameScene extends SceneFW {
     private void updateStateGameOver() {
 
         SettingsGame.addDistance(gameManager.getPassedDistance());
-        if(coreFW.getTouchListenerFW().getTouchUp(250,360,100,35)){
+        if(coreFW.getTouchListenerFW().getTouchUp(250,360,300,35)){
             coreFW.setScene(new GameScene(coreFW));
         }
-        if(coreFW.getTouchListenerFW().getTouchUp(250,420,100,35)){
+        if(coreFW.getTouchListenerFW().getTouchUp(250,420,300,35)){
             coreFW.setScene(new MainMenuScene(coreFW));
         }
 

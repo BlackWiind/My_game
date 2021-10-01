@@ -27,8 +27,8 @@ public class SettingsGame {
         for (int i = 0; i < 5; i++) {
             if(distance[i] == values) break;
             if (distance[i]<values){
-                for (int j = 4; j > 5 ; j--) {
-                    distance[i] = distance[j-1];
+                for (int j = 4; j > i ; j--) {
+                    distance[j] = distance[j-1];
                 }
                 distance[i] = values;
                 break;

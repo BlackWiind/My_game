@@ -30,9 +30,9 @@ public class HUD {
         graphicsFW.drawText(coreFW.getString(R.string.txt_hud_currentShields)+":"+currentShieldsPlayer,
                 30,30,16,null,Color.GREEN);
         graphicsFW.drawText(coreFW.getString(R.string.txt_hud_currentSpeed)+":"+currentSpeedPlayer,
-                300,30,16,null,Color.BLUE);
+                300,30,16,null,Color.GREEN);
         graphicsFW.drawText(coreFW.getString(R.string.txt_hud_passedDistance)+":"+passedDistance,
-                400,30,16,null,Color.BLUE);
+                400,30,16,null,Color.GREEN);
     }
 
     public int getHIEGHT_HUD() {
